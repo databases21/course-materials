@@ -1,0 +1,1 @@
+SELECT sales_tax(42),sales_tax2(42),sales_tax3(42);
