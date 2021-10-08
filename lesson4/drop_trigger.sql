@@ -1,0 +1,1 @@
+DROP TRIGGER on_actor_add ON actor

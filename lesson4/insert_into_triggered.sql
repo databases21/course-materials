@@ -1,0 +1,1 @@
+INSERT INTO actor VALUES(DEFAULT,'Ivan','Ivanov')

@@ -1,0 +1,13 @@
+CREATE OR REPLACE FUNCTION add_timestamp() RETURNS TRIGGER
+AS $timestmp$
+BEGIN
+	IF (TG_OP= 'INSERT') THEN
+		NEW.last_update= CURRENT_TIMESTAMP;
+		RETURN NEW;
+	END IF;
+	RETURN NULL;
+END;
+$timestmp$ LANGUAGE plpgsql;
+
+CREATE TRIGGER on_actor_add AFTER INSERT ON actor
+EXECUTE PROCEDURE add_timestamp();
