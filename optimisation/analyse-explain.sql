@@ -1,0 +1,2 @@
+ANALYSE foo;
+EXPLAIN SELECT * FROM foo;
